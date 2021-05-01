@@ -61,7 +61,7 @@ RUN wget --no-check-certificate https://dl.google.com/linux/linux_signing_key.pu
 RUN wget --no-check-certificate -qO - https://keys.anydesk.com/repos/DEB-GPG-KEY -O /app/anydesk.key
 RUN apt-key add /app/anydesk.key
 RUN apt-key add /app/linux_signing_key.pub
-RUN https://github.com/SaladTechnologies/salad-applications/releases/download/0.5.1/Salad-0.5.1_amd64.deb && sudo dpkg --install Salad-0.5.1_amd64.deb
+RUN apt-get salada
 RUN set -ex; \
     apt-get update \
     && apt-get install -y --no-install-recommends \
